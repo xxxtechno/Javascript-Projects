@@ -1,0 +1,116 @@
+<html>
+
+<head>
+<title>Analog Saat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="clock">
+    <div class="inner">
+        <div class="hour hand"></div>
+        <div class="minute hand"></div>
+        <div class="second hand"></div>
+        <div class="graduations">
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+            <div class="graduation"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+
+<script>
+	
+
+// ***********************************************
+// Bu kodu www.zekican.net adresinden aldınız..
+// ***********************************************
+var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+var EnableRightClick = 0;
+if(isNS)
+document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+function mischandler(){
+if(EnableRightClick==1){ return true; }
+else {return false; }
+}
+function mousehandler(e){
+if(EnableRightClick==1){ return true; }
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+function keyhandler(e) {
+var myevent = (isNS) ? e : window.event;
+if (myevent.keyCode==96)
+EnableRightClick = 1;
+return;
+}
+document.oncontextmenu = mischandler;
+document.onkeypress = keyhandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+
+
+	</script>
+</body>
+
+</html>

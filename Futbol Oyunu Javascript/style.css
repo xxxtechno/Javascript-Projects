@@ -1,0 +1,23 @@
+body{
+	background-color: #dddddd;
+	margin: 10px;
+}
+#canvas{
+	background-color: white;
+	border: 5px solid;
+}
+
+#out {
+	position: relative;
+	top: -55%;
+	left: 890px;
+	font-family: verdana;
+	user-select: none;
+	font-size: 40px;
+	width: 430px;
+	height: 50px;
+}
+
+#out p:hover{
+	cursor: pointer;
+}

@@ -1,5 +1,3 @@
-	
-	//ps= player speed
 var ps = 15;
 
 function nfp(urpx) {
@@ -17,18 +15,17 @@ var ogoal = document.getElementById('goal');
 var w = window.innerWidth;
 var h = window.innerHeight;
 
-var map = []; // Or you could call it "key"
+var map = [];
 onkeydown = onkeyup = function(e) {
-    e = e || event; // to deal with IE
+    e = e || event; 
     map[e.keyCode] = e.type == 'keydown';
-    /*insert conditional here*/
+    
 }
 
 
 
 function keydown() {
-    //if key was up arrow
-    if (map[40]) {
+if (map[40]) {
         if (nfp(r.style.top) + ps > h - 200)
             r.style.top = h - 200 + "px";
         else
@@ -37,7 +34,6 @@ function keydown() {
 
 
 
-    //if key was down arrow
     else if (map[38]) {
         if (nfp(r.style.top) - ps < 0)
             r.style.top = 0 + "px";
@@ -46,15 +42,13 @@ function keydown() {
     }
 
 
-    //if key was s
     if (map[83]) {
         if (nfp(l.style.top) + ps > h - 200)
             l.style.top = h - 200 + "px";
         else
             l.style.top = nfp(l.style.top) + ps + "px";
     }
-
-    //if key was w
+	
     else if (map[87]) {
         if (nfp(l.style.top) - ps < 0)
             l.style.top = 0 + "px";
@@ -62,8 +56,6 @@ function keydown() {
             l.style.top = nfp(l.style.top) - ps + "px";
     }
 
-    //40 down, 38 up
-    //w 87,s 83
 }
 
 
@@ -83,12 +75,10 @@ function ball() {
 function moveball() {
     ball();
 
-    //remove overflow y
     if (h < nfp(b.style.top) + 20 || nfp(b.style.top) < 0) {
         speedy *= -1;
     }
 
-    //overflow-x right
     if (nfp(b.style.left) >= w - 50) {
         if (nfp(r.style.top) <= nfp(b.style.top) + 20 && nfp(r.style.top) + 200 >= nfp(b.style.top)) {
             speedx *= -1;
@@ -98,8 +88,6 @@ function moveball() {
 
 
 
-
-    //remove overflow x in left ir get the goal in left
     if (nfp(b.style.left) <= 30) {
         if (nfp(l.style.top) <= nfp(b.style.top) + 20 && nfp(l.style.top) + 200 >= nfp(b.style.top)) {
             speedx *= -1;

@@ -1,0 +1,1 @@
+MARİO AMA ÇAKMA KARŞİM :D
